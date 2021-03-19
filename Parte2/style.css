@@ -1,43 +1,82 @@
 header {
-
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 
 h2 {
-
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+  justify-content: space-evenly;
+  padding-left: 130px;
+  padding-right: 130px;
+  text-align: center;
 }
 
 .nav {
-
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   }
 
   li {
-
-
+  list-style: none;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  justify-content: space-evenly;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
   }
 
   .content{
-
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
 }
 
   .aside {
-
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  justify-content: space-evenly;
+  padding-top: 5px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   }
 
   .slidebox{
-
-   
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  display: flex;
+  text-align:center;
+  padding-right: 50px;
+  padding-left: 50px;
   }
 
   .article{
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   }
 
 
 .poem{
-
+  border: solid;
+  border-width: 1px;
+  border-color: black;
 }
 
 
@@ -45,10 +84,12 @@ h2 {
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
     .article {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   } 
 header{
-
+ display: none;
 }
 }
 
@@ -56,21 +97,26 @@ header{
 @media (max-width:599px) {
 
 header,.content{
-
+  display: none;
 }
 
 .nav {
-
-
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
 
 .nav > li {
-
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 
 }
-
-
-  
