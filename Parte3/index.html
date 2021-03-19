@@ -16,13 +16,30 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 
 // CREA TU FUNCION mayusculas aqui:
 
-
+function mayusculas(nombres)
+{
+  let mayusculas=nombres.map(nombres=>nombres.toUpperCase());
+  console.log(mayusculas);
+}
 
 /*
 ### F2 Crea una funcion llamada numVocales que reciba como parámetro un arreglo y cuente el numero de vocales de cada elemento y escriba en consola "datos: tiene [x] vocales , para cada elemento del arreglo" 
 */
 
 // CREA TU FUNCION numVocales aqui:
+
+function numVocales(string)
+{
+  let numVocales = 0;
+  for (let i=0; i<string.length; i++)
+  {
+       if (string.charAt(i)=="a"||string.charAt(i)=="e"||string.charAt(i)=="i"||string.charAt(i)=="o"||string.charAt(i)=="u"||string.charAt(i)=="A"||string.charAt(i)=="E"||string.charAt(i)=="I"||string.charAt(i)=="O"||string.charAt(i)=="U")
+        {
+           numVocales+=1;
+       }
+  }
+  console.log("El nombre de " + string + " tiene " + numVocales + " vocales.");
+}
 
 
 /*
@@ -31,8 +48,13 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 
 // CREA TU FUNCION numVocalesArr aqui:
 
-
-
+function numVocalesArr(nombres)
+{
+    for(let i=0; i<nombres.length; i++)
+    {
+        numVocales(nombres[i]);
+    }
+}
 
 
 /* 
@@ -65,7 +87,18 @@ Deberia escribir en consola
 
 */
 
+function Perro(nombre, color, raza)
+{
+  this.nombre=nombre;
+  this.color=color;
+  this.raza=raza;
+  this.printInfo=printInfo;
+}
 
+function printInfo()
+{ 
+    console.log(`El perro se llama ${this.nombre}, es de color ${this.color} y su raza es ${this.raza}.`); 
+}
 
 /***
  * 
@@ -74,13 +107,13 @@ Deberia escribir en consola
  ***/
 
 // F1
-
+console.log(mayusculas(nombres));
 
 // F2
-
+console.log(numVocales("Javier"));
 
 // F3
-
+console.log(numVocalesArr(nombres));
 
 
 
@@ -90,6 +123,15 @@ Deberia escribir en consola
  * 
  ***/
 
+let Juan=new Perro('Juan', 'café', 'pastor alemán');
+let Luis=new Perro('Luis', 'negro', 'labrador');
+let Pedro=new Perro('Pedro', 'dorado', 'golden retriever');
+console.log(Juan.nombre);
+console.log(Luis.color);
+console.log(Pedro.raza);
+Juan.printInfo();
+Luis.printInfo();
+Pedro.printInfo();
 
 </script>
 
